@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8"> <!-- set character encoding FIRST -->
+   <title>Broccoli</title>
+   <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   <script src="webforms2/webforms2.js"></script>
+</head>
+<body>
+   <header>
+      <h1>The Broccoli Institute</h1>
+      <nav>
+         <h2><a href="broccoli.html">Broccoli</a></h2>
+      </nav>
+   </header>
+   <form method="post" action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi">
+   <h2>Contact</h2>
+      <fieldset><!-- single line text box -->
+         <legend>Contact Information</legend>
+         <label for="name">Name:</label>
+         <input type="text" name="Name" id="name" class="text" autocomplete="on" autofocus required>
+         <label for="email">Email Address:</label>
+         <input type="email" name="Email" id="email" class="text" autocomplete="on" required>
+      </fieldset>
+      <fieldset><!-- single line text box -->
+         <legend>Super Secret Login Information</legend>
+         <label for="username">Username:</label>
+         <input type="text" name="Username" id="username" class="text" autocomplete="off" required>
+         <label for="password">Password:</label>
+         <input type="text" name="Password" id="password" class="text" autocomplete="off" required>
+      </fieldset>
+      <fieldset><!-- single line text box -->
+         <legend>Address</legend>
+         <label for="state">State:</label>
+         <input type="text" name="State" id="state" class="text" autocomplete="on" required>
+         <label for="zipcode">Zip Code:</label>
+         <input type="text" name="Zipcode" id="zipcode" class="text" placeholder="#####" pattern="^[0-9]{5}$" autocomplete="on" required>
+      </fieldset>
+      <fieldset><!-- datetime-->
+         <legend>Current time</legend>
+         <label for="datetime">What date and time is it?</label>
+         <input type="datetime-local" name="Datetime" id="datetime" class="datetime" required>
+      </fieldset>
+      <fieldset><!-- Date and time-->
+         <legend>When were you born?</legend>
+         <label for="date">What date?</label>
+         <input type="date" name="Date" id="date" class="date" required>
+         <label for="time">What time?</label>
+         <input type="time" name="Time" id="time" class="time" value="01:30" required>
+      </fieldset>
+      <fieldset><!-- Check boxes -->
+         <legend>How do you like your broccoli?</legend>
+         <label for="boiled">Boiled:</label>
+         <input type="checkbox" name="how_prepared" id="boiled" class="checkbox" value="Boiled" checked="checked">
+         <label for="steamed">Steamed:</label>
+         <input type="checkbox" name="how_prepared" id="steamed" class="checkbox" value="Steamed">
+         <label for="fried">Fried:</label>
+         <input type="checkbox" name="how_prepared" id="fried" class="checkbox" value="Fried">
+         <label for="raw">Raw:</label>
+         <input type="checkbox" name="how_prepared" id="raw" class="checkbox" value="Raw">
+      </fieldset>
+      <fieldset><!-- Radio buttons -->
+         <legend>How do you buy your broccoli?</legend>
+         <label for="frozen">Frozen:</label>
+         <input type="radio" name="how_buy" id="frozen" class="radiobutton" value="Frozen" checked="checked"/>
+         <label for="fresh">Fresh:</label>
+         <input type="radio" name="how_buy" id="fresh" class="radiobutton" value="Fresh">
+         <label for="other">Other:</label>
+         <input type="radio" name="how_buy" id="other" class="radiobutton" value="Other">
+         <input type="text" name="OtherType">
+      </fieldset>
+      <fieldset><!-- List box -->
+         <legend>Broccoli Contest</legend>
+         <label for="amount">How many florets can you eat?</label>
+         <select name="amount" size="4" id="amount" class="select">
+            <option value="10" selected="selected">10 florets</option>
+            <option value="20">20 florets</option>
+            <option value="30">30 florets</option>
+            <option value="40">40 florets</option>
+         </select>
+      </fieldset>
+      <fieldset><!-- Feedback Multi-line text box (textarea) -->
+         <legend>Feedback</legend>
+         <label for="feedback">We would like to hear from you.</label>
+         <textarea name="feedback" cols="40" rows="8" id="feedback" class="textarea" required></textarea>
+      </fieldset>
+      <fieldset><!-- Datalist -->
+         <legend>Broccoli is not the only vegetable</legend>
+         <label for="text5">Your favorite vegetable:</label>
+         <input name="text5" id="text5" type="text" list="vegetables">
+         <datalist id="vegetables">
+            <option value="Lettuce">Lettuce</option>
+            <option value="Tomato">Tomato</option>
+            <option value="Cucumber">Cucumber</option>
+         </datalist>
+      </fieldset>
+      <fieldset><!-- submit and clear buttons -->
+         <legend>Form controls</legend>
+         <label for="submit">Submit your form:</label>
+         <input type="submit" value="Submit" name="submit" id="submit" class="submit">
+         <label for="clear">Clear your form:</label>
+         <input type="button" value="Clear" name="clear" id="clear" class="clear">
+         <label for="save">Save your form:</label>
+         <input type="image" name="save" id="save" class="save" src="images/save_button.jpg" alt="Save" formnovalidate>
+      </fieldset>
+   </form>
+</body>
+</html>
