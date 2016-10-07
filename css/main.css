@@ -1,6 +1,40 @@
 /* Filename: main.css
 *  10/05/2016
 */
-h1 {
-   color: brown;
+html {
+   background: rgb(214, 255, 250);
+}
+body {
+   width: 700px;
+   margin: 0 auto;
+   background: white;
+}
+header {
+   height: 100px;
+   margin-bottom: 1em;
+}
+nav {
+   height: 40px;
+   margin-bottom: 1em;
+}
+/* sections */
+#multimedia {
+   background: rgb(183, 252, 163);
+}
+#information {
+   float: left;
+   width: 60%;
+   background: rgb(211, 211, 255);
+}
+#blog {
+   float: right;
+   width: 30%;
+   background: #ffd5d5;
+}
+#recipe {
+   clear: both;
+   background: rgb(255, 255, 165);
+}
+#about {
+   background: rgb(175, 255, 255);
 }
