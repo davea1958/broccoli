@@ -1,11 +1,30 @@
-/* Filename: main.css
+/*********************
+*  Filename: main.css
 *  10/05/2016
-*/
+*  By Dave Anderson
+*********************/
+/********************************/
+/* @font-face rule declarations */
+@font-face {
+   font-family: 'RobotoSlab';
+   src: url('../fonts/RobotoSlab-Regular.ttf');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'RobotoSlab';
+   src: url('../fonts/RobotoSlab-Bold.ttf');
+   font-weight: bold;
+   font-style: normal;
+}
+/*****************/
+/* main elements */
 html {
    background: rgb(214, 255, 250);
 }
 body {
    width: 700px;
+   font-family: RobotoSlab;
    margin: 0 auto;
    background: white;
 }
@@ -17,18 +36,19 @@ nav {
    height: 40px;
    margin-bottom: 1em;
 }
+/************/
 /* sections */
 #multimedia {
    background: rgb(183, 252, 163);
 }
 #information {
    float: left;
-   width: 60%;
+   width: 65%;
    background: rgb(211, 211, 255);
 }
 #blog {
    float: right;
-   width: 30%;
+   width: 35%;
    background: #ffd5d5;
 }
 #recipe {
@@ -37,4 +57,15 @@ nav {
 }
 #about {
    background: rgb(175, 255, 255);
+}
+#contact {
+   background: rgb(183, 252, 163);
+}
+/***********************/
+/* other desert cities */
+p {
+   font-family: 'Merriweather Sans';
+   font-size: 1em;
+   font-weight: normal;
+   font-style: normal;
 }
