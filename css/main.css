@@ -23,13 +23,13 @@
 /* main elements */
 /*****************/
 html {
-   background: rgb(0, 0, 0);
+   background-color: rgb(0, 0, 0);
 }
 body {
    width: 700px;
    font-family: RobotoSlab;
    margin: 0 auto;
-   background: rgb(0, 0, 0);
+   background-color: rgb(0, 0, 0);
 }
 header {
    height: 120px;
@@ -48,50 +48,44 @@ header h1 {
 nav a {
    color: rgb(255, 255, 0)
 }
+blockquote {
+   margin: 0 0 20px 0;
+   padding: 1px 20px 20px 20px;
+   background-color: rgb(175, 255, 255);
+   border-radius: 25px;
+}
 footer {
    margin-bottom: 20px;
    padding: 20px;
    border-radius: 25px;
-   background: rgb(183, 252, 163);
    background: linear-gradient(top, #80ff5c 0%, #b7fca3 100%);
    background: -moz-linear-gradient(top, #80ff5c 0%, #b7fca3 100%);
    background: -webkit-linear-gradient(top, #80ff5c 0%, #b7fca3 100%);
-}
-blockquote {
-   margin: 0 0 20px 0;
-   padding: 1px 20px 20px 20px;
-   background: rgb(175, 255, 255);
-   border-radius: 25px;
-}
-blockquote footer {
-   padding: 0;
-   border-radius: 0;
-   background: rgb(175, 255, 255);
 }
 /************/
 /* sections */
 /************/
 #multimedia {
+   text-align: center;
    margin-bottom: 20px;
-   background: rgb(183, 252, 163);
+   background-color: rgb(183, 252, 163);
    padding: 1px 20px;
    border-radius: 25px;
 }
 #audio {
-   width: 330px;
+   width: 400px;
    margin: 0 auto;
    padding: 20px 0 0 20px;
-   border: 3px solid black;
+   border: 1px solid black;
    border-radius: 25px;
 }
 #image {
-   width: 275px;
-   margin: 0 auto;
+   margin: 0;
 }
 #information {
    float: left;
    width: 60%;
-   background: rgb(211, 211, 255);
+   background-color: rgb(211, 211, 255);
    margin-bottom: 20px;
    padding: 0 10px;
    border-radius: 25px;
@@ -99,26 +93,26 @@ blockquote footer {
 #blog {
    float: right;
    width: 30%;
-   background: #ffd5d5;
+   background-color: rgb(255, 213, 213);
    margin-bottom: 20px;
    padding: 0 10px;
    border-radius: 25px;
 }
 #recipe {
    clear: both;
-   background: rgb(255, 255, 165);
+   background-color: rgb(255, 255, 165);
    margin-bottom: 20px;
    padding: 20px;
    border-radius: 25px;
 }
 #about {
-   background: rgb(175, 255, 255);
+   background-color: rgb(175, 255, 255);
    margin-bottom: 20px;
    padding: 20px;
    border-radius: 25px;
 }
 #contact_form {
-   background: rgb(183, 252, 163);
+   background-color: rgb(183, 252, 163);
    padding: 20px;
    border-radius: 25px;
 }
@@ -132,6 +126,14 @@ p {
    font-style: normal;
 }
 video {
+   display: block;
+   margin: 0 auto;
+}
+audio {
+   display: block;
+   margin: 0 auto;
+}
+img {
    display: block;
    margin: 0 auto;
 }
