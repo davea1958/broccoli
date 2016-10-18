@@ -35,18 +35,29 @@ header {
    height: 120px;
    color: rgb(255, 255, 0);
    background-color: rgb(9, 124, 0);
-   text-align: center;
    margin: 40px;
    padding: 0 10px;
    border-radius: 25px;
    box-shadow: 10px 10px 10px 1px rgba(255, 255, 255, .5);
 }
+nav {
+   text-align: center;
+}
 header h1 {
    font-size: 2.5em;
-   text-shadow: 5px 5px 1px rgba(255, 255, 255, .5);
+   text-shadow: 5px 5px 1px rgba(255, 137, 0, 0.8);
 }
-nav a {
-   color: rgb(255, 255, 0)
+a {
+   color: rgb(255, 255, 0);
+   background-color: rgb(9, 124, 0);
+   -webkit-transition: all .5s ease;
+   -moz-transition: all .5s ease;
+   -o-transition: all .5s ease;
+   transition: all .5s ease;
+}
+a:hover {
+   color: rgb(0, 0, 255);
+   background: rgb(183, 252, 163);
 }
 blockquote {
    margin: 0 0 20px 0;
@@ -55,16 +66,56 @@ blockquote {
    border-radius: 25px;
 }
 footer {
+   font-size: 1em;
    margin-bottom: 20px;
    padding: 20px;
    border-radius: 25px;
-   background: linear-gradient(top, #80ff5c 0%, #b7fca3 100%);
-   background: -moz-linear-gradient(top, #80ff5c 0%, #b7fca3 100%);
-   background: -webkit-linear-gradient(top, #80ff5c 0%, #b7fca3 100%);
+   background: -webkit-linear-gradient(top, rgb(128, 255, 92) 0%, rgb(175, 255, 255) 100%);
+   background: -moz-linear-gradient(top, rgb(128, 255, 92) 0%, rgb(175, 255, 255) 100%);
+   background: -ms-linear-gradient(top, rgb(128, 255, 92) 0%, rgb(175, 255, 255) 100%);
+   background: -o-linear-gradient(top, rgb(128, 255, 92) 0%, rgb(175, 255, 255) 100%);
+   background: linear-gradient(top, rgb(128, 255, 92) 0%, rgb(175, 255, 255) 100%);
 }
 /************/
 /* sections */
 /************/
+.logo {
+   opacity: 0;
+   -webkit-transition-property: left, opacity, webkit-transform;
+   -webkit-transition-duration: 3s, 4s, 3s;
+   -webkit-transition-timing-function: ease, ease, ease-out;
+   -webkit-transition-delay: 0s, .5s, 0s;
+
+   -moz-transition-property: left, opacity, moz-transform;
+   -moz-transition-duration: 3s, 4s, 3s;
+   -moz-transition-timing-function: ease, ease, ease-out;
+   -moz-transition-delay: 0s, .5s, 0s;
+
+   -o-transition-property: left, opacity, o-transform;
+   -o-transition-duration: 3s, 4s, 3s;
+   -o-transition-timing-function: ease, ease, ease-out;
+   -o-transition-delay: 0s, .5s, 0s;
+
+   transition-property: left, opacity, transform;
+   transition-duration: 3s, 4s, 3s;
+   transition-timing-function: ease, ease, ease-out;
+   transition-delay: 0s, .5s, 0s;
+}
+.anim-logo {
+   -webkit-transform: rotate(-1080deg);
+   -moz-transform: rotate(-1080deg);
+   -o-transform: rotate(-1080deg);
+   transform: rotate(-1080deg);
+   opacity: 1;
+}
+#theOnlyLogo {
+   position: absolute;
+   left: 1485px;
+
+}
+#theOnlyLogo.anim-logo {
+   left: 395px;
+}
 #multimedia {
    text-align: center;
    margin-bottom: 20px;
@@ -115,6 +166,40 @@ footer {
    background-color: rgb(183, 252, 163);
    padding: 20px;
    border-radius: 25px;
+}
+#contact_form input[type="text"],
+#contact_form input[type="email"],
+#contact_form input[type="datetime-local"],
+#contact_form input[type="datetime-local"],
+#contact_form input[type="date"],
+#contact_form input[type="time"],
+#contact_form select,
+#contact_form textarea,
+#contact_form datalist {
+   background-color: rgb(255, 245, 196);
+   border: none;
+   width: 200px;
+   padding: .5em;
+   font-size: 1em;
+   -webkit-transition: background-color .5s ease;
+   -moz-transition: background-color .5s ease;
+   -o-transition: background-color .5s ease;
+   transition: background-color .5s ease;
+}
+#contact_form input:focus,
+#contact_form select:focus,
+#contact_form textarea:focus,
+#contact_form datalist:focus {
+   border: 1px solid rgb(255, 255, 255);
+   background-color: rgb(9, 124, 0);
+   color: rgb(255, 255, 0);
+   font-weight: bold;
+   font-style: normal;
+}
+#contact_form input[type="submit"],
+#contact_form input[type="button"] {
+   transform: scale(1.25);
+   margin: 0 10px;
 }
 /***********************/
 /* other desert cities */
