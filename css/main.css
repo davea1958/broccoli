@@ -20,205 +20,180 @@
    font-style: normal;
 }
 /*****************/
-/* main elements */
+/* global styles */
 /*****************/
-html {
-   background-color: rgb(0, 0, 0);
+/*limited reset*/
+html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   vertical-align: baseline;
+   font: inherit;
 }
-body {
-   width: 700px;
-   font-family: RobotoSlab;
-   margin: 0 auto;
-   background-color: rgb(0, 0, 0);
-}
-header {
-   height: 120px;
-   color: rgb(255, 255, 0);
-   background-color: rgb(9, 124, 0);
-   margin: 40px;
-   padding: 0 10px;
-   border-radius: 25px;
-   box-shadow: 10px 10px 10px 1px rgba(255, 255, 255, .5);
-}
-nav {
-   text-align: center;
-}
-header h1 {
-   font-size: 2.5em;
-   text-shadow: 5px 5px 1px rgba(255, 137, 0, 0.8);
+
+/*html5 display rule*/
+address, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, nav, section, summary {
+   display: block;
 }
 a {
-   color: rgb(255, 255, 0);
-   background-color: rgb(9, 124, 0);
-   -webkit-transition: all .5s ease;
-   -moz-transition: all .5s ease;
-   -o-transition: all .5s ease;
-   transition: all .5s ease;
+   text-decoration: none;
+   color: #667F6A;
+   border-bottom: 1px dotted #667F6A;
 }
 a:hover {
-   color: rgb(0, 0, 255);
-   background: rgb(183, 252, 163);
+   color: #7B798F;
+   border-bottom: 1px solid #7B798F;
 }
-blockquote {
-   margin: 0 0 20px 0;
-   padding: 1px 20px 20px 20px;
-   background-color: rgb(175, 255, 255);
-   border-radius: 25px;
-}
-footer {
-   font-size: 1em;
-   margin-bottom: 20px;
-   padding: 20px;
-   border-radius: 25px;
-   background: -webkit-linear-gradient(top, rgb(128, 255, 92) 0%, rgb(175, 255, 255) 100%);
-   background: -moz-linear-gradient(top, rgb(128, 255, 92) 0%, rgb(175, 255, 255) 100%);
-   background: -ms-linear-gradient(top, rgb(128, 255, 92) 0%, rgb(175, 255, 255) 100%);
-   background: -o-linear-gradient(top, rgb(128, 255, 92) 0%, rgb(175, 255, 255) 100%);
-   background: linear-gradient(top, rgb(128, 255, 92) 0%, rgb(175, 255, 255) 100%);
-}
-/************/
-/* sections */
-/************/
-.logo {
-   opacity: 0;
-   -webkit-transition-property: left, opacity, webkit-transform;
-   -webkit-transition-duration: 3s, 4s, 3s;
-   -webkit-transition-timing-function: ease, ease, ease-out;
-   -webkit-transition-delay: 0s, .5s, 0s;
 
-   -moz-transition-property: left, opacity, moz-transform;
-   -moz-transition-duration: 3s, 4s, 3s;
-   -moz-transition-timing-function: ease, ease, ease-out;
-   -moz-transition-delay: 0s, .5s, 0s;
-
-   -o-transition-property: left, opacity, o-transform;
-   -o-transition-duration: 3s, 4s, 3s;
-   -o-transition-timing-function: ease, ease, ease-out;
-   -o-transition-delay: 0s, .5s, 0s;
-
-   transition-property: left, opacity, transform;
-   transition-duration: 3s, 4s, 3s;
-   transition-timing-function: ease, ease, ease-out;
-   transition-delay: 0s, .5s, 0s;
+a:focus {
+    outline: thin dotted;
 }
-.anim-logo {
-   -webkit-transform: rotate(-1080deg);
-   -moz-transform: rotate(-1080deg);
-   -o-transform: rotate(-1080deg);
-   transform: rotate(-1080deg);
-   opacity: 1;
+html {
+   background: rgb(139, 135, 175);
 }
-#theOnlyLogo {
-   position: absolute;
-   left: 1485px;
-
-}
-#theOnlyLogo.anim-logo {
-   left: 395px;
-}
-#multimedia {
-   text-align: center;
-   margin-bottom: 20px;
-   background-color: rgb(183, 252, 163);
-   padding: 1px 20px;
-   border-radius: 25px;
-}
-#audio {
-   width: 400px;
+body {
+   width: 100%;
    margin: 0 auto;
-   padding: 20px 0 0 20px;
-   border: 1px solid black;
-   border-radius: 25px;
-}
-#image {
-   margin: 0;
-}
-#information {
-   float: left;
-   width: 60%;
-   background-color: rgb(211, 211, 255);
-   margin-bottom: 20px;
-   padding: 0 10px;
-   border-radius: 25px;
-}
-#blog {
-   float: right;
-   width: 30%;
-   background-color: rgb(255, 213, 213);
-   margin-bottom: 20px;
-   padding: 0 10px;
-   border-radius: 25px;
-}
-#recipe {
-   clear: both;
-   background-color: rgb(255, 255, 165);
-   margin-bottom: 20px;
-   padding: 20px;
-   border-radius: 25px;
-}
-#about {
-   background-color: rgb(175, 255, 255);
-   margin-bottom: 20px;
-   padding: 20px;
-   border-radius: 25px;
-}
-#contact_form {
-   background-color: rgb(183, 252, 163);
-   padding: 20px;
-   border-radius: 25px;
-}
-#contact_form input[type="text"],
-#contact_form input[type="email"],
-#contact_form input[type="datetime-local"],
-#contact_form input[type="datetime-local"],
-#contact_form input[type="date"],
-#contact_form input[type="time"],
-#contact_form select,
-#contact_form textarea,
-#contact_form datalist {
-   background-color: rgb(255, 245, 196);
-   border: none;
-   width: 200px;
-   padding: .5em;
-   font-size: 1em;
-   -webkit-transition: background-color .5s ease;
-   -moz-transition: background-color .5s ease;
-   -o-transition: background-color .5s ease;
-   transition: background-color .5s ease;
-}
-#contact_form input:focus,
-#contact_form select:focus,
-#contact_form textarea:focus,
-#contact_form datalist:focus {
-   border: 1px solid rgb(255, 255, 255);
-   background-color: rgb(9, 124, 0);
-   color: rgb(255, 255, 0);
-   font-weight: bold;
-   font-style: normal;
-}
-#contact_form input[type="submit"],
-#contact_form input[type="button"] {
-   transform: scale(1.25);
-   margin: 0 10px;
-}
-/***********************/
-/* other desert cities */
-/***********************/
-p {
-   font-family: 'Merriweather Sans';
-   font-size: 1em;
+   font: 100% RobotoSlab, Arial, Helvetica, sans-serif;
+   line-height: 1.5;
+   background: white;
+   color: black;
    font-weight: normal;
    font-style: normal;
 }
+nav h2 {
+   display: none;
+}
+nav ul {
+   list-style: none;
+}
+/*****************/
+/* header styles */
+/*****************/
+header {
+   background: rgb(100, 98, 102);
+   width: 100%;
+   height: auto;
+   padding-top: 1px;
+   overflow: hidden;
+   margin-bottom: 1.5em;
+   text-align: center;
+}
+header h1 {
+   color: white;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+header h2 {
+   color: rgb(82, 255, 82);
+}
+header a {
+   text-decoration: none;
+   border: none;
+   color: white;
+}
+header a:hover {
+   border: none;
+   color: white;
+}
+/* Other styles */
+blockquote h3 {
+   text-align: center;
+}
 video {
-   display: block;
-   margin: 0 auto;
+   width: 100%;
+   height: auto;
 }
 audio {
-   display: block;
-   margin: 0 auto;
+   width: 100%;
+   height: auto;
 }
 img {
-   display: block;
-   margin: 0 auto;
+   width: 100%;
+   height: auto;
+}
+figcaption {
+   text-align: center;
+}
+footer {
+   clear: both;
+   background-color: bisque;
+}
+.headers h2, h3 {
+   text-align: center;
+}
+.headers h2 {
+   text-transform: uppercase;
+}
+.headers h4 {
+   padding-left: 1.5em;
+}
+/* mobile styles */
+@media only screen and (max-width: 360px) {
+   #multimedia, #information, #recipe {
+      float: none;
+      width: 100%;
+      margin: 0;
+   }
+}
+/*tablet styles*/
+@media only screen and (min-width: 361px) and (max-width: 768px) {
+   body {
+      width: 95%;
+      margin: 0 auto;
+   }
+   #mission {
+      height: auto;
+      padding: 0 4%;
+      overflow: hidden;
+      background-color: rgb(221, 255, 244);
+      margin-bottom: 1em;
+      position: relative;
+   }
+   #multimedia {
+      float: left;
+      width: 47%;
+      margin-left: 2%;
+   }
+   #information {
+      float: left;
+      width: 47%;
+      margin: 0 2%;
+   }
+   #recipe {
+      clear: both;
+      width: 96%;
+      padding: 2%
+   }
+}
+/*desktop styles*/
+@media only screen and (min-width: 769px) {
+   body {
+      width: 95%;
+      margin: 0 auto;
+   }
+   #mission {
+      height: auto;
+      padding: 0 4%;
+      overflow: hidden;
+      background-color: rgb(221, 255, 244);
+      margin-bottom: 1em;
+      position: relative;
+   }
+   #multimedia {
+      float: left;
+      width: 31%;
+      padding-left: 2%;
+   }
+   #information {
+      float: left;
+      width: 31%;
+      padding-left: 2%;
+   }
+   #recipe {
+      float: right;
+      width: 31%;
+      padding-left: 2%;
+      padding-right: 1%
+   }
 }
