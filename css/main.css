@@ -61,11 +61,11 @@ body {
    font-weight: normal;
    font-style: normal;
 }
-nav h2 {
-   display: none;
-}
-nav ul {
+ul {
    list-style: none;
+}
+p {
+   padding-bottom: 20px;
 }
 /*****************/
 /* header styles */
@@ -75,14 +75,15 @@ header {
    width: 100%;
    height: auto;
    padding-top: 1px;
+   padding-bottom: 8px;
    overflow: hidden;
-   margin-bottom: 1.5em;
    text-align: center;
 }
 header h1 {
    color: white;
    font-weight: bold;
    text-transform: uppercase;
+   word-spacing: .3em;
 }
 header h2 {
    color: rgb(82, 255, 82);
@@ -96,9 +97,46 @@ header a:hover {
    border: none;
    color: white;
 }
+/**************/
+/* nav styles */
+/**************/
+#mainNav {
+   overflow: hidden;
+   padding: 20px 0;
+}
+#mainNav h2 {
+   display: none;
+}
+#mainNav li {
+   float: left;
+}
+#mainNav a {
+   text-transform: uppercase;
+   display: block;
+   color: rgb(76, 67, 65);
+   border: none;
+}
+#mainNav a:hover {
+   color: rgb(0, 211, 0);
+}
+#mainNav a.current {
+   color: rgb(0, 211, 0);
+   cursor: default;
+}
+/****************/
 /* Other styles */
+/****************/
+#mission {
+   background: url(../images/BroccoliBkGdImg.jpg);
+}
+#mission h2, #mission p {
+   color: rgb(0, 0, 0);
+}
 blockquote h3 {
    text-align: center;
+}
+cite a {
+   color: black;
 }
 video {
    width: 100%;
@@ -106,7 +144,6 @@ video {
 }
 audio {
    width: 100%;
-   height: auto;
 }
 img {
    width: 100%;
@@ -118,8 +155,12 @@ figcaption {
 footer {
    clear: both;
    background-color: bisque;
+   padding: 10px;
 }
-.headers h2, h3 {
+footer h2 {
+   text-decoration: underline;
+}
+.headers h2, .headers h3 {
    text-align: center;
 }
 .headers h2 {
@@ -128,8 +169,50 @@ footer {
 .headers h4 {
    padding-left: 1.5em;
 }
+#multimedia h2, #information h2, #recipe h2 {
+   padding-bottom: 10px;
+   text-decoration: underline;
+}
+span{
+   display: block;
+   text-align: center;
+}
+/******************************************
+* Media Queries
+******************************************/
 /* mobile styles */
 @media only screen and (max-width: 360px) {
+   #mainNav {
+      width: 300px;
+      margin: 0 auto;
+      margin-bottom: 0;
+   }
+   #mainNav li {
+      margin-right: 5%;
+   }
+   #mainNav li:last-child {
+      margin-right: 0;
+   }
+   #mainNav a {
+      font-size: .9em;
+      text-align: center;
+      padding-bottom: 50px;
+   }
+   #mainNav a em {
+      display: none;
+   }
+   a.home {
+      background: url(../images/home20px.jpg) no-repeat 10px 45px;
+   }
+   a.contact {
+      background: url(../images/twitter20px.png) no-repeat 20px 45px;
+   }
+   a.photos {
+      background: url(../images/photo20px.png) no-repeat 15px 45px;
+   }
+   a.buy {
+      background: url(../images/shopping20px.png) no-repeat 5px 45px;
+   }
    #multimedia, #information, #recipe {
       float: none;
       width: 100%;
@@ -142,9 +225,45 @@ footer {
       width: 95%;
       margin: 0 auto;
    }
+   header h1 {
+      font-size: 1.4em;
+   }
+   header h2 {
+      font-size: 1.25em;
+   }
+   #mainNav {
+      width: 361px;
+      margin: 0 auto;
+   }
+   #mainNav li {
+      margin-right: 5%;
+   }
+   #mainNav li:last-child {
+      margin-right: 0;
+   }
+   #mainNav a {
+      font-size: 1.2em;
+      text-align: center;
+      padding-bottom: 40px;
+   }
+   #mainNav a em {
+      display: none;
+   }
+   a.home {
+      background: url(../images/home20px.jpg) no-repeat 20px 45px;
+   }
+   a.contact {
+      background: url(../images/twitter20px.png) no-repeat 35px 45px;
+   }
+   a.photos {
+      background: url(../images/photo20px.png) no-repeat 25px 45px;
+   }
+   a.buy {
+      background: url(../images/shopping20px.png) no-repeat 10px 45px;
+   }
    #mission {
       height: auto;
-      padding: 0 4%;
+      padding: 10px;
       overflow: hidden;
       background-color: rgb(221, 255, 244);
       margin-bottom: 1em;
@@ -172,9 +291,51 @@ footer {
       width: 95%;
       margin: 0 auto;
    }
+   header h1 {
+      font-size: 2em;
+   }
+   header h2 {
+      font-size: 1.5em;
+   }
+   #mainNav {
+      width: 769px;
+      margin: 0 auto;
+   }
+   #mainNav li {
+      margin-right: 2em;
+   }
+   #mainNav li:last-child {
+      margin-right: 0;
+   }
+   #mainNav a {
+      font-size: 1.2em;
+      text-align: center;
+      padding-left: 30px; /* For the icon to fit */
+   }
+   #mainNav a em {
+      color: rgb(76, 67, 65);
+      text-align: center;
+   }
+   #mainNav em {
+      font-size: .8em;
+      display: block;
+      text-transform: lowercase;
+   }
+   a.home {
+      background: url(../images/home20px.jpg) no-repeat 30px 5px;
+   }
+   a.contact {
+      background: url(../images/twitter20px.png) no-repeat 45px 5px;
+   }
+   a.photos {
+      background: url(../images/photo20px.png) no-repeat 5px 5px;
+   }
+   a.buy {
+      background: url(../images/shopping20px.png) no-repeat 40px 5px;
+   }
    #mission {
       height: auto;
-      padding: 0 4%;
+      padding: 10px 20px;
       overflow: hidden;
       background-color: rgb(221, 255, 244);
       margin-bottom: 1em;
@@ -196,4 +357,50 @@ footer {
       padding-left: 2%;
       padding-right: 1%
    }
+}
+/****************/
+/* Contact Form */
+/****************/
+#formBody {
+   background-color: white;
+}
+#contact_form {
+   background-color: rgb(183, 252, 163);
+   margin-bottom: 40px;
+   padding: 20px;
+   border-radius: 25px;
+}
+#contact_form input[type="text"],
+#contact_form input[type="email"],
+#contact_form input[type="datetime-local"],
+#contact_form input[type="datetime-local"],
+#contact_form input[type="date"],
+#contact_form input[type="time"],
+#contact_form select,
+#contact_form textarea,
+#contact_form datalist {
+   background-color: rgb(255, 245, 196);
+   border: none;
+   width: 200px;
+   padding: .5em;
+   font-size: 1em;
+   -webkit-transition: background-color .5s ease;
+   -moz-transition: background-color .5s ease;
+   -o-transition: background-color .5s ease;
+   transition: background-color .5s ease;
+}
+#contact_form input:focus,
+#contact_form select:focus,
+#contact_form textarea:focus,
+#contact_form datalist:focus {
+   border: 1px solid rgb(255, 255, 255);
+   background-color: rgb(9, 124, 0);
+   color: rgb(255, 255, 0);
+   font-weight: bold;
+   font-style: normal;
+}
+#contact_form input[type="submit"],
+#contact_form input[type="button"] {
+   transform: scale(1.25);
+   margin: 0 10px;
 }
